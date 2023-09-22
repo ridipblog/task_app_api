@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Send Data to Express.js API</title>
+</head>
+
+<body>
+    <h1>Send Data to API</h1>
+    <button id="sendButton">Send Data</button>
+
+    <script>
+        document.getElementById('sendButton').addEventListener('click', () => {
+            const dataToSend = { title: 'title 3', content: 'content 3', date: 'date 3' };
+
+            fetch('http://localhost:3000/api/add_task', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(dataToSend),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Response:', data.title);
+                    alert('Data sent successfully');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error sending data');
+                });
+        });
+    </script>
+</body>
+
+</html>
