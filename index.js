@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const env = require('dotenv')
-env.config({ path: './models/config.env' });
+env.config({ path: './require/config.env' });
 const corsOptions = {
     origin: "https://task-app-list.onrender.com"
 };
