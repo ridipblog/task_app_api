@@ -4,7 +4,7 @@ const cors = require('cors');
 const env = require('dotenv')
 env.config({ path: './models/config.env' });
 const corsOptions = {
-    origin: "http://localhost:3000"
+    origin: "https://task-app-list.onrender.com"
 };
 app.use(cors(corsOptions));
 app.use(express.json());

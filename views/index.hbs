@@ -11,9 +11,9 @@
 
     <script>
         document.getElementById('sendButton').addEventListener('click', () => {
-            const dataToSend = { title: 'title 3', content: 'content 3', date: 'date 3' };
+            const dataToSend = { title: 'host title 2', content: 'host content 2', date: 'host date 2' };
 
-            fetch('http://localhost:3000/api/add_task', {
+            fetch('https://task-app-list.onrender.com/api/add_task', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
